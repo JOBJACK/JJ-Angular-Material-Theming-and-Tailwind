@@ -9,6 +9,7 @@ import { ThemeBuilderService } from './theme-builder.service';
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
+
 export class AppComponent  {
 
   primaryColor = document.documentElement.style.getPropertyValue('--theme-primary-500')
