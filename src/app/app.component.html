@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+  <img src="https://raw.githubusercontent.com/JOBJACK/JJ-Angular-Material-navigation/main/src/assets/jobjack.png" alt="test" style="width: 150px" class="mr-5"/>
+  <span class="text-xs mx-2">All jobs</span>
+  <span class="text-xs mx-2">My jobs</span>
+  <span class="text-xs mx-2">Notification</span>
+  <span class="text-xs mx-2">Resources</span>
+  <div class="flex-auto"></div>
+  <button
+    color="accent"
+    class="float-right"
+    mat-mini-fab
+    aria-label="Example icon button with a home icon">
+  <!-- <mat-icon svgIcon="home">home</mat-icon> -->
+  </button>
+</mat-toolbar>
+<div class="grid grid-cols-3 gap-4 m-5">
+  <div class="border-solid border-2 border-[{{primaryColor}}] rounded-xl h-6"></div>
+  <div class="border-solid border-2 border-[{{accentColor}}] rounded-xl h-6"></div>
+  <div class="border-solid border-2 border-[{{primaryColor}}] rounded-xl h-6"></div>
+  <div class="col-span-2 border-solid border-2 border-[{{primaryColor}}] rounded-xl h-6"></div>
+  <div class="border-solid border-2 border-[{{primaryColor}}] rounded-xl h-6"></div>
+  <div class="border-solid border-2 border-[{{primaryColor}}] rounded-xl h-6"></div>
+  <div class="col-span-2 border-solid border-2 border-[{{accentColor}}] rounded-xl h-6"></div>
+</div>
+<div class="m-3" [formGroup]="myForm">
+  <mat-form-field>
+    <mat-label>Select Primary Colour</mat-label>
+    <input
+      matInput
+      [ngxMatColorPicker]="pickerPrimary"
+      formControlName="colorCtrPrimary"
+      [disabled]="disabled"
+    />
+    <ngx-mat-color-toggle
+      matSuffix
+      [for]="pickerPrimary"
+    ></ngx-mat-color-toggle>
+    <ngx-mat-color-picker
+      #pickerPrimary
+      [touchUi]="touchUi"
+      [color]="colorPrimary"
+    ></ngx-mat-color-picker>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Select Accent Colour</mat-label>
+    <input
+      matInput
+      [ngxMatColorPicker]="pickerAccent"
+      formControlName="colorCtrAccent"
+      [disabled]="disabled"
+    />
+    <ngx-mat-color-toggle matSuffix [for]="pickerAccent"></ngx-mat-color-toggle>
+    <ngx-mat-color-picker
+      #pickerAccent
+      [touchUi]="touchUi"
+      [color]="colorAccent"
+    ></ngx-mat-color-picker>
+  </mat-form-field>
+</div>

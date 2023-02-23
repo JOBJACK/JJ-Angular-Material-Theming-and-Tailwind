@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+@import './palette.scss';
+@include mat.core();
+
+
+$jj-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+    density: 0,
+  )
+);
+// emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($jj-theme);
+@include mat.all-component-themes($jj-theme);
+
+button {
+  & .mat-icon {
+    & svg {
+      margin-top: -4px; // vertically align svg icon inside button
+    }
+  }
+}
+
+.mat-raised-button,
+.mat-stroked-button,
+.mat-button {
+  // height: 40px;
+  // width: 98px;
+  border-radius: 20px !important;
+  padding: 10px, 24px !important;
+}
