@@ -11,58 +11,15 @@ export interface Color {
   providedIn: 'root',
 })
 export class ThemeBuilderService {
-  //////////// Colour picker ////////////
-  // public disabled = false;
-  // public colorPrimary: ThemePalette = 'primary';
-  // public colorAccent: ThemePalette = 'accent';
-  // public touchUi = false;
 
-  // public options = [
-  //   { value: true, label: 'True' },
-  //   { value: false, label: 'False' },
-  // ];
-
-  // public listColors = ['primary', 'accent', 'warn'];
-
-  ////////////////
-
-  primaryColor = '#1c9fda';
   primaryColorPalette: Color[] = [];
-  accentColor = '#f6fa06';
   accentColorPalette: Color[] = [];
 
-  constructor() {
-    this.savePrimaryColor();
-    this.saveAccentColor();
-    // this.myForm = fb.group({
-    //   colorCtrPrimary: null,
-    //   colorCtrAccent: null,
-    // });
-    //this.onFormChanges();
-    console.log('TESTING');
-  }
+  constructor() {}
 
-  ngOnInit() {}
 
-  // onFormChanges() {
-  //   this.myForm.valueChanges
-  //     .pipe(
-  //       tap((val) => {
-  //         if (val.colorCtrPrimary) {
-  //           this.primaryColor = `#${val.colorCtrPrimary.hex}`;
-  //           this.savePrimaryColor();
-  //         }
-  //         if (val.colorCtrAccent) {
-  //           this.accentColor = `#${val.colorCtrAccent.hex}`;
-  //           this.saveAccentColor();
-  //         }
-  //       })
-  //     )
-  //     .subscribe();
-  // }
-
-  savePrimaryColor() {
-    this.primaryColorPalette = this.computeColors(this.primaryColor);
+  savePrimaryColor(primaryColor) {
+    this.primaryColorPalette = this.computeColors(primaryColor);
 
     for (const color of this.primaryColorPalette) {
       const key1 = `--theme-primary-${color.name}`;
@@ -71,13 +28,11 @@ export class ThemeBuilderService {
       const value2 = color.darkContrast ? 'rgba(black, 0.87)' : 'white';
       document.documentElement.style.setProperty(key1, value1);
       document.documentElement.style.setProperty(key2, value2);
-      console.log(key1)
-      console.log(value1)
     }
   }
 
-  saveAccentColor() {
-    this.accentColorPalette = this.computeColors(this.accentColor);
+  saveAccentColor(accentColor) {
+    this.accentColorPalette = this.computeColors(accentColor);
 
     for (const color of this.accentColorPalette) {
       const key1 = `--theme-accent-${color.name}`;
