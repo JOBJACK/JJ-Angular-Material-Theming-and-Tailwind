@@ -12,9 +12,8 @@ import { ThemeBuilderService } from './theme-builder.service';
 
 export class AppComponent  {
 
-  primaryColorTheme = document.documentElement.style.getPropertyValue('--theme-primary-500')
-  accentColorTheme = document.documentElement.style.getPropertyValue('--theme-accent-500')
-
+  primaryColorTheme
+  accentColorTheme
   primaryColor = '#1c9fda';
   accentColor = '#f6fa06';
 
@@ -49,10 +48,12 @@ export class AppComponent  {
           if (val.colorCtrPrimary) {
             this.primaryColor = `#${val.colorCtrPrimary.hex}`;
             this.tb.savePrimaryColor(this.primaryColor);
+            this.primaryColorTheme = document.documentElement.style.getPropertyValue('--theme-primary-500')
           }
           if (val.colorCtrAccent) {
             this.accentColor = `#${val.colorCtrAccent.hex}`;
             this.tb.saveAccentColor(this.accentColor);
+            this.accentColorTheme = document.documentElement.style.getPropertyValue('--theme-accent-500')
           }
         })
       )
