@@ -4,3 +4,15 @@ rel="stylesheet"
 />
 <my-app>loading</my-app>
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: 'var(--theme-primary-500)',
+          accent: 'var(--theme-accent-500)',
+        }
+      }
+    }
+  }
+</script>
