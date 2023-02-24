@@ -36,6 +36,8 @@ export class AppComponent  {
     ) {
       this.tb.savePrimaryColor(this.primaryColor);
       this.tb.saveAccentColor(this.accentColor);
+      this.primaryColorTheme = document.documentElement.style.getPropertyValue('--theme-primary-500')
+      this.accentColorTheme = document.documentElement.style.getPropertyValue('--theme-accent-500')
       this.myForm = fb.group({
         colorCtrPrimary: null,
         colorCtrAccent: null,
