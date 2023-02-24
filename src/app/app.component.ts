@@ -11,7 +11,7 @@ import { ThemeBuilderService } from './theme-builder.service';
 })
 export class AppComponent {
   primaryColor = '#1c9fda';
-  accentColor = '#f6fa06';
+  accentColor = '#5d5d5d';
 
   public disabled = false;
   public colorPrimary: ThemePalette = 'primary';
