@@ -41,9 +41,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { MAT_COLOR_FORMATS, NgxMatColorPickerModule, NGX_MAT_COLOR_FORMATS } from '@angular-material-components/color-picker';
+import {
+  MAT_COLOR_FORMATS,
+  NgxMatColorPickerModule,
+  NGX_MAT_COLOR_FORMATS,
+} from '@angular-material-components/color-picker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -53,8 +56,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'fill' },
     },
-    { provide: MAT_COLOR_FORMATS, 
-      useValue: NGX_MAT_COLOR_FORMATS },
+    { provide: MAT_COLOR_FORMATS, useValue: NGX_MAT_COLOR_FORMATS },
   ],
   imports: [
     BrowserModule,
@@ -98,7 +100,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PortalModule,
     ScrollingModule,
     NgxMatColorPickerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
 })
 export class AppModule {}

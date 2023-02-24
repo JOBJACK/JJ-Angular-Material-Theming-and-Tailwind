@@ -1,0 +1,5 @@
+::ng-deep canvas {
+  overflow-clip-margin: content-box !important;
+  overflow: clip !important;
+  display: inline !important;
+}
