@@ -1,10 +1,17 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
-    <div class="w-32 bg-accent h-full grid grid-cols-1">
+    <div class="w-40 bg-accent h-full grid grid-cols-1">
       <div class=""></div>
       <div class=""></div>
       <div class=""></div>
-      <div class="border-solid border-2 border-primary flex justify-center items-center">
+      <div
+        class="
+          border-solid border-2 border-primary
+          flex
+          justify-center
+          items-center
+        "
+      >
         <span class="text-xs text-accent_contrast">Test</span>
       </div>
     </div>
@@ -31,21 +38,8 @@
         <!-- <mat-icon svgIcon="home">home</mat-icon> -->
       </button>
     </mat-toolbar>
-    <div class="grid grid-cols-3 gap-4 m-5">
-      <div class="border-solid border-2 border-primary rounded-xl h-6"></div>
-      <div class="border-solid border-2 border-accent rounded-xl h-6"></div>
-      <div class="border-solid border-2 border-primary rounded-xl h-6"></div>
-      <div
-        class="col-span-2 border-solid border-2 border-primary rounded-xl h-6"
-      ></div>
-      <div class="border-solid border-2 border-primary rounded-xl h-6"></div>
-      <div class="border-solid border-2 border-primary rounded-xl h-6"></div>
-      <div
-        class="col-span-2 border-solid border-2 border-accent rounded-xl h-6"
-      ></div>
-    </div>
     <div class="m-3 text-sm" [formGroup]="myForm">
-      <mat-form-field>
+      <mat-form-field class="mr-4">
         <mat-label>Select Primary Colour</mat-label>
         <input
           matInput
@@ -62,7 +56,6 @@
           [color]="colorPrimary"
         ></ngx-mat-color-picker>
       </mat-form-field>
-      <br />
       <mat-form-field>
         <mat-label>Select Accent Colour</mat-label>
         <input
@@ -80,6 +73,92 @@
           [color]="colorAccent"
         ></ngx-mat-color-picker>
       </mat-form-field>
+    </div>
+    <div class="grid grid-cols-3 gap-4 m-5">
+      <mat-card class="bg-primary_100 elevated h-60">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+      <mat-card class="bg-primary_100 elevated h-60">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+      <mat-card class="bg-primary_100 elevated h-60">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+      <mat-card class="bg-accent_100 elevated col-span-2 h-80">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+      <mat-card class="bg-accent_100 elevated h-80">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+      <mat-card class="bg-primary_100 elevated h-60">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+      <mat-card class="bg-primary_100 elevated col-span-2 h-60">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image />
+        <mat-card-content>
+          <p></p>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
